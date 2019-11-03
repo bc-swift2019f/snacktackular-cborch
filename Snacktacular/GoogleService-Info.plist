@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>21119314420-pqap3ndfb8pc7ndnhosnud6k0tvrvt60.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.21119314420-pqap3ndfb8pc7ndnhosnud6k0tvrvt60</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDZQF6dAG6dkwFB6ktZ68OhLLJhC8opElk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>21119314420</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.borchetta.Snacktacular</string>
+	<key>PROJECT_ID</key>
+	<string>snacktacular-3f9e7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>snacktacular-3f9e7.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:21119314420:ios:7a3219cf0b86dae80af1a1</string>
+	<key>DATABASE_URL</key>
+	<string>https://snacktacular-3f9e7.firebaseio.com</string>
+</dict>
+</plist>
