@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 class SpotDetailViewController: UIViewController {
     
@@ -28,6 +29,12 @@ class SpotDetailViewController: UIViewController {
             addressField.text = spot.address
         }
     }
+    
+    func updateUserInterface() {
+        nameField.text = spot.name
+        addressField.text = spot.address
+        
+    }
 
     @IBAction func photoButtonPressed(_ sender: UIButton) {
     }
@@ -38,6 +45,12 @@ class SpotDetailViewController: UIViewController {
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
     }
     
+    @IBAction func lookupPlacePressed(_ sender: UIBarButtonItem) {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
+    }
+    
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
         let isPresentingInAddMode = presentingViewController is UINavigationController
         if isPresentingInAddMode {
@@ -45,5 +58,32 @@ class SpotDetailViewController: UIViewController {
         } else {
             navigationController?.popViewController(animated: true)
         }
+    }
+}
+
+extension SpotDetailViewController: GMSAutocompleteViewControllerDelegate {
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        spot.name = place.name! // Why do I need to unwrap in mine??
+        spot.address = place.formattedAddress ?? ""
+        spot.coordinate = place.coordinate
+        dismiss(animated: true, completion: nil)
+        updateUserInterface()
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print("Error: ", error.localizedDescription)
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
