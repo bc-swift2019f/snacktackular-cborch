@@ -17,6 +17,7 @@ class SpotsListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var spots: Spots!
     var authUI: FUIAuth!
+    @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class SpotsListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         spots.loadData {
+            self.sortBasedOnSegmentPressed()
             self.tableView.reloadData()
         }
     }
@@ -70,6 +72,23 @@ class SpotsListViewController: UIViewController {
                 tableView.deselectRow(at: selectedIndexPath, animated: true)
             }
         }
+    }
+    
+    func sortBasedOnSegmentPressed() {
+        switch sortSegmentedControl.selectedSegmentIndex {
+        case 0: // A-Z
+            spots.spotArray.sort(by: {$0.name < $1.name})
+        case 1: // Closest
+            print("To Do")
+        case 2: // Avg Rating
+            print("TODO")
+        default:
+            print("*** Error: You shouldn't have gotten here. The segemnted control should just have 3 segments")
+        }
+    }
+    
+    @IBAction func sortSegmentPressed(_ sender: UISegmentedControl) {
+        sortBasedOnSegmentPressed()
     }
     
     @IBAction func signOutPressed(_ sender: UIBarButtonItem) {
