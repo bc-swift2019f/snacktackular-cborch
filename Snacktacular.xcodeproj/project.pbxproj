@@ -17,6 +17,7 @@
 		3E8390E5206597F600512DEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8390E3206597F600512DEA /* Main.storyboard */; };
 		3E8390E7206597F600512DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8390E6206597F600512DEA /* Assets.xcassets */; };
 		3E8390EA206597F600512DEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8390E8206597F600512DEA /* LaunchScreen.storyboard */; };
+		C57FC0A3237248D00019B3D6 /* Double+roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57FC0A2237248D00019B3D6 /* Double+roundTo.swift */; };
 		C5A873D4236F7BF100E504AA /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A873D3236F7BF100E504AA /* Spot.swift */; };
 		C5A873D6236F7CDE00E504AA /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A873D5236F7CDE00E504AA /* Spots.swift */; };
 		C5A873D8236F8D1900E504AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5A873D7236F8D1900E504AA /* GoogleService-Info.plist */; };
@@ -36,6 +37,7 @@
 		3E8390E9206597F600512DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E8390EB206597F600512DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D8B9F43340F0700FE469D22 /* Pods-Snacktacular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.debug.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.debug.xcconfig"; sourceTree = "<group>"; };
+		C57FC0A2237248D00019B3D6 /* Double+roundTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+roundTo.swift"; sourceTree = "<group>"; };
 		C5A873D3236F7BF100E504AA /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		C5A873D5236F7CDE00E504AA /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		C5A873D7236F8D1900E504AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				3E0F960B2065A17500AE450D /* SpotDetailViewController.swift */,
 				3E0F960D2065AB6400AE450D /* SpotReviewsTableViewCell.swift */,
 				3E0F960F2065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift */,
+				C57FC0A2237248D00019B3D6 /* Double+roundTo.swift */,
 				3E8390E3206597F600512DEA /* Main.storyboard */,
 				3E8390E6206597F600512DEA /* Assets.xcassets */,
 				3E8390E8206597F600512DEA /* LaunchScreen.storyboard */,
@@ -294,6 +297,7 @@
 				C5A873D4236F7BF100E504AA /* Spot.swift in Sources */,
 				3E8390E0206597F600512DEA /* AppDelegate.swift in Sources */,
 				C5A873D6236F7CDE00E504AA /* Spots.swift in Sources */,
+				C57FC0A3237248D00019B3D6 /* Double+roundTo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
