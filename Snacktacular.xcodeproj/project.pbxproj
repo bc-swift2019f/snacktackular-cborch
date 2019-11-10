@@ -22,6 +22,7 @@
 		C5A873D6236F7CDE00E504AA /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A873D5236F7CDE00E504AA /* Spots.swift */; };
 		C5A873D8236F8D1900E504AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5A873D7236F8D1900E504AA /* GoogleService-Info.plist */; };
 		C5DAFD822378A15D00D0AD8D /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DAFD812378A15D00D0AD8D /* UIView+addBorder.swift */; };
+		C5DAFD842378BAD000D0AD8D /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DAFD832378BAD000D0AD8D /* ReviewTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		C5A873D5236F7CDE00E504AA /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		C5A873D7236F8D1900E504AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C5DAFD812378A15D00D0AD8D /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
+		C5DAFD832378BAD000D0AD8D /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		F4303ACD352B897F3004B08C /* Pods-Snacktacular.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.release.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 				3E0F960B2065A17500AE450D /* SpotDetailViewController.swift */,
 				3E0F960D2065AB6400AE450D /* SpotReviewsTableViewCell.swift */,
 				3E0F960F2065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift */,
+				C5DAFD832378BAD000D0AD8D /* ReviewTableViewController.swift */,
 				C57FC0A2237248D00019B3D6 /* Double+roundTo.swift */,
 				C5DAFD812378A15D00D0AD8D /* UIView+addBorder.swift */,
 				3E8390E3206597F600512DEA /* Main.storyboard */,
@@ -296,6 +299,7 @@
 				3E0F96102065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift in Sources */,
 				3E0F960C2065A17500AE450D /* SpotDetailViewController.swift in Sources */,
 				3E0F960E2065AB6400AE450D /* SpotReviewsTableViewCell.swift in Sources */,
+				C5DAFD842378BAD000D0AD8D /* ReviewTableViewController.swift in Sources */,
 				C5DAFD822378A15D00D0AD8D /* UIView+addBorder.swift in Sources */,
 				3E0F960A20659D9000AE450D /* SpotsTableViewCell.swift in Sources */,
 				C5A873D4236F7BF100E504AA /* Spot.swift in Sources */,
