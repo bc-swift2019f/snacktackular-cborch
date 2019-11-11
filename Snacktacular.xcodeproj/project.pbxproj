@@ -25,6 +25,8 @@
 		C5DAFD842378BAD000D0AD8D /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DAFD832378BAD000D0AD8D /* ReviewTableViewController.swift */; };
 		C5DAFD862378C91500D0AD8D /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DAFD852378C91500D0AD8D /* Review.swift */; };
 		C5DAFD882378D5BC00D0AD8D /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DAFD872378D5BC00D0AD8D /* Reviews.swift */; };
+		C5DAFD8A2378E39400D0AD8D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DAFD892378E39400D0AD8D /* Photo.swift */; };
+		C5DAFD8C2378E45100D0AD8D /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DAFD8B2378E45100D0AD8D /* Photos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		C5DAFD832378BAD000D0AD8D /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		C5DAFD852378C91500D0AD8D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		C5DAFD872378D5BC00D0AD8D /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		C5DAFD892378E39400D0AD8D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C5DAFD8B2378E45100D0AD8D /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		F4303ACD352B897F3004B08C /* Pods-Snacktacular.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.release.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +103,8 @@
 				C5A873D3236F7BF100E504AA /* Spot.swift */,
 				C5DAFD872378D5BC00D0AD8D /* Reviews.swift */,
 				C5DAFD852378C91500D0AD8D /* Review.swift */,
+				C5DAFD8B2378E45100D0AD8D /* Photos.swift */,
+				C5DAFD892378E39400D0AD8D /* Photo.swift */,
 				3E8390E1206597F600512DEA /* SpotsListViewController.swift */,
 				3E0F960920659D9000AE450D /* SpotsTableViewCell.swift */,
 				3E0F960B2065A17500AE450D /* SpotDetailViewController.swift */,
@@ -301,8 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5DAFD8A2378E39400D0AD8D /* Photo.swift in Sources */,
 				C5DAFD882378D5BC00D0AD8D /* Reviews.swift in Sources */,
 				3E8390E2206597F600512DEA /* SpotsListViewController.swift in Sources */,
+				C5DAFD8C2378E45100D0AD8D /* Photos.swift in Sources */,
 				3E0F96102065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift in Sources */,
 				3E0F960C2065A17500AE450D /* SpotDetailViewController.swift in Sources */,
 				3E0F960E2065AB6400AE450D /* SpotReviewsTableViewCell.swift in Sources */,
