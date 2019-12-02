@@ -128,6 +128,37 @@ class SpotDetailViewController: UIViewController {
         }
     }
     
+    func disableTextEditing() {
+        nameField.backgroundColor = UIColor.clear
+        nameField.isEnabled = false
+        nameField.noBorder()
+        
+        addressField.backgroundColor = UIColor.clear
+        addressField.isEnabled = false
+        addressField.noBorder()
+    }
+    
+    func saveCancelAlert(title: String, message: String, segueIdentifier: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
+            self.spot.saveData() { succes in
+                self.saveBarButton.title = "Done"
+                self.cancelBarButton.title = ""
+                self.navigationController?.setToolbarHidden(true, animated: true)
+                self.disableTextEditing()
+                if segueIdentifier == "AddReview" {
+                    self.performSegue(withIdentifier: segueIdentifier, sender: nil)
+                } else {
+                    self.cameraOrLibraryAlert()
+                }
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        
+    }
     
     func cameraOrLibraryAlert() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -156,12 +187,21 @@ class SpotDetailViewController: UIViewController {
     }
     
     @IBAction func photoButtonPressed(_ sender: UIButton) {
-        cameraOrLibraryAlert()
+        if spot.documentID == "" {
+            saveCancelAlert(title: "This Venue Has Not Neen Saved", message: "You must save this venue before you can add a photot.", segueIdentifier: "AddPhoto")
+        } else {
+            cameraOrLibraryAlert()
+        }
     }
     
     
     @IBAction func reviewButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "AddReview", sender: nil)
+        if spot.documentID == "" {
+            saveCancelAlert(title: "This Venue Has Not Neen Saved", message: "You must save this venue before you can review it.", segueIdentifier: "AddReview")
+        } else {
+            performSegue(withIdentifier: "AddReview", sender: nil)
+        }
+        
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
