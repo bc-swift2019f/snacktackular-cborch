@@ -41,10 +41,19 @@ class Photo {
             print("Error: could not convert image to data format")
             return completed(false)
         }
+        let uploadMetadata = StorageMetadata()
+        uploadMetadata.contentType = "image/jpeg"
         documentUUID = UUID().uuidString // generate a unique id to use for the photo images name
         // create a ref to upload storage to spot.documentID's folder (bucket), with the name we created
         let storageRef = storage.reference().child(spot.documentID).child(self.documentUUID)
-        let uploadTask = storageRef.putData(photoData)
+        let uploadTask = storageRef.putData(photoData, metadata: uploadMetadata) {
+            metadata, error in
+            guard error == nil else {
+                print("Error during putData storage upload for reference \(storageRef). Error \(error!.localizedDescription)")
+                return
+            }
+            print("Upload worked. MetaData is \(metadata)")
+        }
         
         uploadTask.observe(.success) { (snapshot) in
             // Create the dictionary representing the data we want to save
