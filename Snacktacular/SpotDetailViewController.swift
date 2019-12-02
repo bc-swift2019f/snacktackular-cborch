@@ -80,6 +80,9 @@ class SpotDetailViewController: UIViewController {
         reviews.loadData(spot: spot) {
             self.tableView.reloadData()
         }
+        photos.loadData(spot: spot) {
+            self.collectionView.reloadData()
+        }
     }
     
     func updateUserInterface() {
@@ -303,10 +306,6 @@ extension SpotDetailViewController: UIImagePickerControllerDelegate, UINavigatio
         
         dismiss(animated: true) {
             photo.saveData(spot: self.spot, completed: { (success) in
-                if success {
-                    self.photos.photoArray.append(photo)
-                    self.collectionView.reloadData()
-                }
             })
             
         }
